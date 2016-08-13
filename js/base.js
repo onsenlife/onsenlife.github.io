@@ -2,6 +2,7 @@
 var Util = require("util");
 (function() {
   var utilObj = new Util();
+  var flag = false;
 
   utilObj.addReadyEvent(function(){
     var s = skrollr.init({
@@ -12,6 +13,10 @@ var Util = require("util");
           return 1-p;
         } 
       }
+    });
+    
+    document.getElementById("pc_logo").addEventListener("click", function(){
+      window.scrollBy(0,250);      
     });
   });
 })();
